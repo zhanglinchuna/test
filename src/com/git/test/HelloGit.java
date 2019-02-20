@@ -10,5 +10,7 @@ public class HelloGit {
         System.out.println("aaaaaaaaaaaaaaaaaa");
         System.out.println("eeeeeeeeeeeeee");
         System.out.println("yingyingying");
+
+        System.out.println("分支3");
     }
 }
