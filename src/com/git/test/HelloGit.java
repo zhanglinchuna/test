@@ -7,5 +7,7 @@ public class HelloGit {
         System.out.println("111111111111");
         System.out.println("111111111111");
         System.out.println("hhhhhhhhhhh");
+
+        System.out.println("哈哈哈哈");
     }
 }
