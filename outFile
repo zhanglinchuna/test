@@ -1,0 +1,19 @@
+    File file = new File("F:\\Downloads\\abc.sql");
+        if (!file.exists()){
+            file.createNewFile();
+        }
+        // 创建输出流，rw：以读取、写入方式打开指定文件。
+        FileOutputStream write = new FileOutputStream(file);
+        // 创建通道
+        FileChannel writeChannel = write.getChannel();
+        // 创建缓冲区
+        ByteBuffer byteBuffer = ByteBuffer.allocate(1024 * 1024);//1M缓冲区
+        String str = "哦啊圣诞节佛i";
+        byteBuffer.put(str.getBytes());
+        String str1 ="\r\n\r\n";
+        byteBuffer.put(str1.getBytes());
+        String str2 ="afasdf werwr";
+        byteBuffer.put(str2.getBytes());
+        byteBuffer.flip();
+        writeChannel.write(byteBuffer);
+        writeChannel.close();
